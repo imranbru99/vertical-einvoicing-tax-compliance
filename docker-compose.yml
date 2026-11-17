@@ -1,0 +1,53 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8000"
+    environment:
+      APP_NAME: "Vertical E-Invoicing"
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_URL: http://localhost:8080
+      APP_KEY: base64:VmVydGljYWxFSW52b2ljaW5nS2V5MTIzNDU2Nzg5MA==
+      DB_CONNECTION: mysql
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: einvoicing
+      DB_USERNAME: einvoice
+      DB_PASSWORD: secret
+      SESSION_DRIVER: database
+      CACHE_STORE: database
+      QUEUE_CONNECTION: database
+      DEMO_USER_EMAIL: demo@einvoice.test
+      DEMO_USER_PASSWORD: password
+      EINVOICE_HOURLY_RATE: 55
+      EINVOICE_MONTHLY_COST: 1490
+    volumes:
+      - ./storage:/var/www/html/storage
+    depends_on:
+      mysql:
+        condition: service_healthy
+    command: >
+      sh -c "php artisan migrate --force &&
+             php artisan db:seed --force &&
+             php artisan serve --host=0.0.0.0 --port=8000"
+
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: einvoicing
+      MYSQL_USER: einvoice
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: rootsecret
+    ports:
+      - "3307:3306"
+    volumes:
+      - einvoicing_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-prootsecret"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  einvoicing_mysql:

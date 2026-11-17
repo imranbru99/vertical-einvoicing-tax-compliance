@@ -1,0 +1,286 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "imranbru99/vertical-einvoicing-tax-compliance",
+    "type": "project",
+    "description": "Vertical e-invoicing and tax compliance platform for multi-country invoices, VAT/GST rules, digital signatures, and audit-ready fiscal reporting.",
+    "keywords": [
+        "e-invoicing",
+        "tax-compliance",
+        "laravel",
+        "filament",
+        "vat-gst",
+        "digital-signature",
+        "fiscal-reporting"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Imran Ahmed",
+            "email": "me@imrandev.bd",
+            "homepage": "https://imrandev.bd"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "imrandevbd/drutogoti",
+                "version": "dev-main",
+                "source": {
+                    "url": "https://github.com/imranbru99/laravel-speed-optimization-drutogoti.git",
+                    "type": "git",
+                    "reference": "6c5b4c94bf42e350d5b06c88736dcbf2b8e199f1"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/imranbru99/laravel-speed-optimization-drutogoti/zipball/6c5b4c94bf42e350d5b06c88736dcbf2b8e199f1",
+                    "type": "zip",
+                    "reference": "6c5b4c94bf42e350d5b06c88736dcbf2b8e199f1"
+                },
+                "require": {
+                    "php": "^8.3",
+                    "illuminate/support": "^11.0|^12.0|^13.0",
+                    "illuminate/database": "^11.0|^12.0|^13.0",
+                    "illuminate/contracts": "^11.0|^12.0|^13.0",
+                    "illuminate/routing": "^11.0|^12.0|^13.0",
+                    "illuminate/log": "^11.0|^12.0|^13.0",
+                    "illuminate/console": "^11.0|^12.0|^13.0",
+                    "illuminate/cache": "^11.0|^12.0|^13.0"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "Drutogoti\\": "src/"
+                    }
+                },
+                "extra": {
+                    "laravel": {
+                        "providers": [
+                            "Drutogoti\\DrutogotiServiceProvider"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "imrandevbd/laravel-admin-panel",
+                "version": "dev-main",
+                "source": {
+                    "url": "https://github.com/imranbru99/laravel-admin-panel.git",
+                    "type": "git",
+                    "reference": "b5c39918d7241ecb49986631b6a9a0bbd69000d7"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/imranbru99/laravel-admin-panel/zipball/b5c39918d7241ecb49986631b6a9a0bbd69000d7",
+                    "type": "zip",
+                    "reference": "b5c39918d7241ecb49986631b6a9a0bbd69000d7"
+                },
+                "require": {
+                    "php": "^8.2",
+                    "illuminate/support": "^11.0|^12.0|^13.0",
+                    "illuminate/contracts": "^11.0|^12.0|^13.0",
+                    "illuminate/routing": "^11.0|^12.0|^13.0",
+                    "illuminate/view": "^11.0|^12.0|^13.0",
+                    "illuminate/database": "^11.0|^12.0|^13.0",
+                    "illuminate/console": "^11.0|^12.0|^13.0",
+                    "illuminate/http": "^11.0|^12.0|^13.0",
+                    "illuminate/session": "^11.0|^12.0|^13.0",
+                    "illuminate/auth": "^11.0|^12.0|^13.0",
+                    "illuminate/events": "^11.0|^12.0|^13.0"
+                },
+                "autoload": {
+                    "files": [
+                        "src/Support/helpers.php"
+                    ],
+                    "psr-4": {
+                        "ImranDevBD\\LaravelAdminPanel\\": "src/"
+                    }
+                },
+                "extra": {
+                    "laravel": {
+                        "aliases": {
+                            "AdminPanel": "ImranDevBD\\LaravelAdminPanel\\Facades\\AdminPanel"
+                        },
+                        "providers": [
+                            "ImranDevBD\\LaravelAdminPanel\\AdminPanelServiceProvider"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "imrandevbd/laravel-attendance-hub",
+                "version": "dev-main",
+                "source": {
+                    "url": "https://github.com/imranbru99/laravel-attendance-hub.git",
+                    "type": "git",
+                    "reference": "7bd5a7b4a9b27687e9c060a17544fe359d6ce74c"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/imranbru99/laravel-attendance-hub/zipball/7bd5a7b4a9b27687e9c060a17544fe359d6ce74c",
+                    "type": "zip",
+                    "reference": "7bd5a7b4a9b27687e9c060a17544fe359d6ce74c"
+                },
+                "require": {
+                    "php": "^8.2",
+                    "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/database": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/console": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/queue": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/events": "^10.0|^11.0|^12.0|^13.0"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "ImranDevBd\\AttendanceHub\\": "src/"
+                    }
+                },
+                "extra": {
+                    "laravel": {
+                        "aliases": {
+                            "AttendanceHub": "ImranDevBd\\AttendanceHub\\Facades\\AttendanceHub"
+                        },
+                        "providers": [
+                            "ImranDevBd\\AttendanceHub\\AttendanceHubServiceProvider"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "imrandevbd/laravel-ai-catalog",
+                "version": "dev-main",
+                "source": {
+                    "url": "https://github.com/imranbru99/laravel-ai-catalog.git",
+                    "type": "git",
+                    "reference": "07b5783f3ec08ed61cad9c1ea3439ae9b4e15c25"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/imranbru99/laravel-ai-catalog/zipball/07b5783f3ec08ed61cad9c1ea3439ae9b4e15c25",
+                    "type": "zip",
+                    "reference": "07b5783f3ec08ed61cad9c1ea3439ae9b4e15c25"
+                },
+                "require": {
+                    "php": "^8.2",
+                    "illuminate/console": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/database": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/queue": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/routing": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
+                    "illuminate/view": "^10.0|^11.0|^12.0|^13.0",
+                    "imrandevbd/laravel-ai-hub": "*"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "ImranDevBd\\AiCatalog\\": "src/"
+                    }
+                },
+                "extra": {
+                    "laravel": {
+                        "aliases": {
+                            "AiCatalog": "ImranDevBd\\AiCatalog\\Facades\\AiCatalog"
+                        },
+                        "providers": [
+                            "ImranDevBd\\AiCatalog\\AiCatalogServiceProvider"
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "filament/filament": "^5.11",
+        "imrandevbd/drutogoti": "dev-main",
+        "imrandevbd/laravel-admin-panel": "dev-main",
+        "imrandevbd/laravel-ai-catalog": "dev-main",
+        "imrandevbd/laravel-ai-hub": "dev-main as 1.7.99",
+        "imrandevbd/laravel-attendance-hub": "dev-main",
+        "imrandevbd/laravel-unicode-pdf": "dev-main",
+        "imrandevbd/laravel-universal-slug": "dev-main",
+        "laravel/framework": "^13.17",
+        "laravel/tinker": "^3.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "laravel/pail": "^1.2.5",
+        "laravel/pao": "^1.0.6",
+        "laravel/pint": "^1.27",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "phpunit/phpunit": "^12.5.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "setup": [
+            "composer install",
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate",
+            "@php artisan migrate --force",
+            "npm install --ignore-scripts",
+            "npm run build"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php artisan dev"
+        ],
+        "test": [
+            "@php artisan config:clear --ansi @no_additional_args",
+            "@php artisan test"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi"
+        ],
+        "pre-package-uninstall": [
+            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "imrandevbd/laravel-admin-panel"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
